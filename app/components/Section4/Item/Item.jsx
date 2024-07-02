@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Item = ({item}) => {
   return (
     <li className={styles.li}>
-    <Image src={item.src} fill style={{objectFit:"cover"}}/>
+    <Image src={item.src} fill style={{objectFit:"cover"}} alt='image'/>
    </li>
   )
 }

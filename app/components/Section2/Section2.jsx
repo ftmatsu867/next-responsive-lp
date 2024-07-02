@@ -12,7 +12,7 @@ const Section2 = () => {
             <ul className={styles.ul}>
                 {ItemData.map((item) => {
                     return (
-                        <Item item={item} />
+                        <Item key={item.src} item={item} />
                     )
                 })}
             </ul>

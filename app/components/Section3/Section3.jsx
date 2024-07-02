@@ -8,7 +8,7 @@ const Section3 = () => {
     return (
         <section id='detail' className={styles.container}>
             <div className={styles.imageArea}>
-                <Image src={"/human.jpg"} fill style={{ objectFit: "cover" }} />
+                <Image src={"/human.jpg"} fill style={{ objectFit: "cover" }} alt='image' />
             </div>
             <div className={styles.rightArea}>
                 <span className={styles.span}>Why choose us?</span>
@@ -17,7 +17,7 @@ const Section3 = () => {
                 <ul className={styles.ul}>
                     {ItemData.map((item) => {
                         return (
-                            <Item item={item} />
+                            <Item key={item.src} item={item} />
                         )
                     })}
 
