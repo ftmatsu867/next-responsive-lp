@@ -52,6 +52,7 @@
         display: none;
     }
     @include responsive.max{
+        padding: 0 10%;
         .closeNav{
             display: none;
             transition: all 0.2s;
@@ -68,7 +69,7 @@
             .ul{
                 display: flex;
                 flex-direction: column;
-                padding-left: 100px;
+                padding-left: 10%;
                 li{
                     list-style: none;
                     padding: 4px 0;
