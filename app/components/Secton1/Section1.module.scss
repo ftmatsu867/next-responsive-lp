@@ -1,0 +1,74 @@
+@use "@/app/sass/variables";
+@use "@/app/sass/responsive";
+
+@mixin button{
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+@mixin smallButton{
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.8rem;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/background/castel.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    .title{
+        margin-top: 130px;
+        font-size: 2rem;
+    }
+    .description{
+        width: 60%;
+        padding: 0 100px;
+        margin-top: 15px;
+    }
+    .buttonArea{
+        margin-top: 15px;
+        .button1{
+            @include button;
+            border: none;
+            background-color: variables.$buttonColor;
+        }
+        .button2{
+            @include button;
+            border: 2px solid white;
+            background-color: transparent;
+            margin-left: 10px;
+        }
+    }
+    @include responsive.max{
+        .title{
+            font-size: 1.5rem;
+        }
+        .description{
+            width: 100%;
+            font-size: 0.7rem;
+            padding: 0 50px;
+        }
+        .buttonArea{
+            .button1,.button2{
+                @include smallButton;
+            }
+            
+        }
+    }
+}

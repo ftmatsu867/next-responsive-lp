@@ -1,0 +1,15 @@
+@use "@/app/sass/responsive";
+.li{
+    width: 30%;
+    aspect-ratio: 16/9;
+    position: relative;
+    list-style: none;
+    transition: all 0.2s;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+    }
+    @include responsive.max{
+        width: 40%;
+    }
+   }

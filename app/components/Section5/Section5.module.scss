@@ -1,0 +1,105 @@
+@use "@/app/sass/variables";
+@use "@/app/sass/responsive";
+$bgColor: rgba(240, 235, 235, 0.982);
+
+.container {
+    margin: 100px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .span {
+        color: variables.$buttonColor;
+    }
+
+    .h2 {
+        font-size: 2rem;
+    }
+
+    .form {
+        width: 50%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .div {
+            display: flex;
+            justify-content: space-between;
+
+            .input {
+                width: 49%;
+                padding: 8px;
+                border: none;
+                background-color: $bgColor;
+                outline: none;
+            }
+        }
+
+        .input2 {
+            padding: 8px;
+            background-color: $bgColor;
+            border: none;
+            outline: none;
+        }
+
+        .textarea {
+            padding: 8px;
+            height: 200px;
+            resize: none;
+            background-color: $bgColor;
+            border-style: none;
+            outline: none;
+        }
+
+        .button {
+            padding: 8px;
+            background-color: variables.$buttonColor;
+            border: none;
+            color: white;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                opacity: 0.9;
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    @include responsive.max {
+        .span {
+            font-size: 0.9rem;
+        }
+
+        .h2 {
+            font-size: 1.2rem;
+        }
+
+        .subTitle {
+            text-align: center;
+            font-size: 0.9rem;
+            padding: 0 20px;
+        }
+        .form{
+            width: 80%;
+            .div{
+                flex-direction: column;
+                gap: 10px;
+                .input{
+                    width: 100%;
+                    font-size: 0.7rem;
+                }
+            }
+            input,textarea{
+                font-size: 0.7rem;
+            }
+            .button{
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+@use "@/app/sass/variables";
+@use "@/app/sass/responsive";
+.li{
+    width: 30%;
+    list-style: none;
+    padding: 15px;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    box-shadow: 0 0 20px gray;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover{
+        background-color: gray;
+        transform: translateY(-5px);
+    }
+    
+    .h3{
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .itemDescription{
+        font-size: 0.9rem;
+    }
+    @include responsive.max{
+        width: 45%;
+        .h3{
+            font-size: 0.9rem;
+        }
+        .itemDescription{
+            font-size: 0.8rem;
+        }
+    }
+}

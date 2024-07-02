@@ -1,0 +1,17 @@
+@use "@/app/sass/variables";
+@use "@/app/sass/responsive";
+
+.icon{
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    background-color: variables.$buttonColor;
+    color: white;
+    @include responsive.max{
+        width: 20px;
+        height: 20px;
+        padding: 4px;
+    }
+}

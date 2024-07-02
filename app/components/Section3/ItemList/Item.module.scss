@@ -1,0 +1,20 @@
+@use "@/app/sass/responsive";
+.li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+    .itemDescription{
+        font-size: 0.9rem;
+    }
+    @include responsive.max{
+        .itemTitle{
+            font-size:0.9rem ;
+            text-align: center;
+        }
+        .itemDescription{
+            font-size: 0.7rem;
+            text-align: center;
+        }
+    }
+}
