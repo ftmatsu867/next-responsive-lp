@@ -4,8 +4,8 @@ import "./globals.css";
 const robot_slab = Roboto_Slab({ subsets:["latin"],style:"normal"});
 
 export const metadata = {
-  title: "snowfall",
-  description: "snowfall website",
+  title: "responsive-site",
+  description: "responsive website with nextjs 14",
 };
 
 export default function RootLayout({ children }) {
